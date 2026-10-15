@@ -59,6 +59,9 @@ fun ComponentsDesignPreview(
             )
             Spacer(modifier = Modifier.height(60.dp))
 
+            // 0. Componentes controlados por eventos y animados
+            StateControlSection()
+
             // 1. ProgressBar
             Column(modifier = Modifier.fillMaxWidth()) {
                 Text("CustomProgressBar (65%)", color = AppNeutralTextMain, fontSize = 14.sp)
