@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">IDNP_lab_06</string>
+    <string name="progress_values">Avance visible: %1$d%% · Objetivo: %2$d%%</string>
+    <string name="progress_description">Avance de la demostración</string>
+    <string name="circular_progress_description">Avance circular de la demostración</string>
+    <string name="progress_changing">En transición: la barra y el anillo se acercan al objetivo.</string>
+    <string name="progress_empty">Sin avance: la barra y el anillo están vacíos.</string>
+    <string name="progress_partial">Avance parcial: la barra y el anillo muestran la misma proporción.</string>
+    <string name="progress_complete" formatted="false">Avance completado: la barra y el anillo llegaron al 100%.</string>
+    <string name="circular_progress_hint" formatted="false">Toca el anillo para sumar 25 puntos; al llegar al 100%, el siguiente toque reinicia.</string>
+    <string name="circular_progress_action">Sumar 25 puntos o reiniciar si está completo</string>
+    <string name="loader_description">Indicador de carga de demostración, sin porcentaje</string>
+    <string name="loader_active">Indicador activo: tamaño y opacidad completos. El giro es decorativo y no mide avance.</string>
+    <string name="loader_dimmed" formatted="false">Indicador atenuado: se reduce al 60% del tamaño y al 25% de opacidad; el giro continúa.</string>
+    <string name="dim_loader">Atenuar indicador</string>
+    <string name="activate_loader">Activar indicador</string>
+    <string name="smooth_transition_on">Suavizado activo: el cambio de avance dura 600 ms.</string>
+    <string name="smooth_transition_off">Suavizado desactivado: los valores cambian directamente.</string>
 </resources>
