@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.example.idnp_lab_06.ui.theme.AppNeutralBackground
 import com.example.idnp_lab_06.ui.theme.AppNeutralSurface
 import com.example.idnp_lab_06.ui.theme.AppNeutralTextMain
+import com.example.idnp_lab_06.ui.theme.AppPrimaryDefault
 import com.example.idnp_lab_06.ui.components.WaveComponent
 import com.example.idnp_lab_06.ui.components.CustomProgressBar
 import com.example.idnp_lab_06.ui.components.CustomLoadCircleBar
@@ -32,7 +35,8 @@ import com.example.idnp_lab_06.ui.components.CustomCircularProgressBar
 //@Preview(showBackground = true, widthDp = 360, heightDp = 740)
 @Composable
 fun ComponentsDesignPreview(
-    modifier: Modifier
+    modifier: Modifier,
+    onNavigateToCampusDocs: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -50,14 +54,27 @@ fun ComponentsDesignPreview(
             verticalArrangement = Arrangement.spacedBy(28.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Diseño de Componentes",
-                color = AppNeutralSurface,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(top = 16.dp)
-            )
-            Spacer(modifier = Modifier.height(60.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Diseño de Componentes",
+                    color = AppNeutralSurface,
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                Button(
+                    onClick = onNavigateToCampusDocs,
+                    colors = ButtonDefaults.buttonColors(containerColor = AppNeutralSurface)
+                ) {
+                    Text("CampusDocs 🚀", color = AppPrimaryDefault, fontWeight = FontWeight.Bold)
+                }
+            }
+            Spacer(modifier = Modifier.height(20.dp))
 
             // 0. Componentes controlados por eventos y animados
             StateControlSection()
